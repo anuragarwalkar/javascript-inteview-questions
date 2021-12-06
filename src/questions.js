@@ -78,11 +78,53 @@ console.log(number.name);
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // Write a function called sum ... if you pass the arguments like this then
 // it should give the total sum
-
 const sum = () => {
   // Implement
 };
 console.log(sum(1)(2)(3)());
 // console.log(sum(1)(2)(3)....());
 // Output 6
+// *********************************************************************
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Implement below
+const exampleMap = {
+  a: {
+    b: {
+      c: "JavaScript is fun 😎",
+    },
+  },
+};
+
+const navigateToGivenPath = (obj, path) => {
+  // Implement
+};
+
+console.log(navigateToGivenPath(exampleMap, "a.b.c"));
+// Output navigateToGivenPath(exampleMap, "a.b.c") => JavaScript is fun 😎
+// Output navigateToGivenPath(exampleMap, "a.b.c") => null
+// *********************************************************************
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Implement below
+let deeplyNestedMap = {
+  user: {
+    key_value_map: {
+      CreatedDate: "123424",
+      Department: {
+        Name: "XYZ",
+      },
+    },
+  },
+};
+
+const flaternObj = (obj) => {
+  // Implement
+};
+
+console.log(flaternObj(deeplyNestedMap));
+// {
+//     "user.key_value_map.CreatedDate": "123424",
+//     "user.key_value_map.Department.Name": "XYZ"
+// }
 // *********************************************************************
