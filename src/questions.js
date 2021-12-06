@@ -1,13 +1,13 @@
 // *********************************************************************
 // To what evaluates typeof a and typeof b in the following snippet:
 function foo() {
-  let a = (b = 0);
+  let a = b = 0; // prettier-ignore
   a++;
   return a;
 }
 foo();
-typeof a; // => ???
-typeof b; // => ???
+console.log(typeof a); // => ???
+console.log(typeof b); // => ???
 // *********************************************************************
 
 // *********************************************************************
@@ -39,13 +39,12 @@ function a() {
   return "hello";
 }
 const sentence = a`hi`;
-console.log(sentence);
+console.log("sentence:", sentence);
 // *********************************************************************
 
 // *********************************************************************
 // Tell sequence of the console logs
-const callMe = () =>
-  new Promise((resolve) => resolve("Hello from from promise! 👋"));
+const callMe = () => new Promise((resolve) => resolve("Hi from promise! 👋"));
 
 const funcA = () => {
   // Calling setTimeout
@@ -74,4 +73,16 @@ const array = [];
 
 console.log(array.name);
 console.log(number.name);
+// *********************************************************************
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Write a function called sum ... if you pass the arguments like this then
+// it should give the total sum
+
+const sum = () => {
+  // Implement
+};
+console.log(sum(1)(2)(3)());
+// console.log(sum(1)(2)(3)....());
+// Output 6
 // *********************************************************************
