@@ -1,13 +1,10 @@
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // To what evaluates typeof a and typeof b in the following snippet:
+var a = 10;
 function foo() {
-  let a = b = 0; // prettier-ignore
-  a++;
-  return a;
+  console.log(a);
+  var a = 20;
 }
-foo();
-console.log(typeof a); // => ???
-console.log(typeof b); // => ???
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
