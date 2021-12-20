@@ -74,7 +74,7 @@ console.log(number.name);
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // Shuffle given array
-const someArray = [1, 2, , 4, 5, 6, 7, 8];
+const someArray = [1, 2, 3, 4, 5, 6, 7, 8];
 const shuffle = (array) => {
   // Implement
   return array;
