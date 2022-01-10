@@ -120,7 +120,7 @@ const navigateToGivenPath = (obj, path) => {
 
 console.log(navigateToGivenPath(exampleMap, "a.b.c"));
 // Output navigateToGivenPath(exampleMap, "a.b.c") => JavaScript is fun 😎
-// Output navigateToGivenPath(exampleMap, "a.b.c") => null
+// Output navigateToGivenPath(exampleMap, "a.b.c.d") => null
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
