@@ -106,7 +106,7 @@ console.log(sum(1)(2)(3)());
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // Implement below
-const exampleMap = {
+const exampleObj = {
   a: {
     b: {
       c: "JavaScript is fun 😎",
@@ -118,7 +118,7 @@ const navigateToGivenPath = (obj, path) => {
   // Implement
 };
 
-console.log(navigateToGivenPath(exampleMap, "a.b.c"));
+console.log(navigateToGivenPath(exampleObj, "a.b.c"));
 // Output navigateToGivenPath(exampleMap, "a.b.c") => JavaScript is fun 😎
 // Output navigateToGivenPath(exampleMap, "a.b.c.d") => null
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
