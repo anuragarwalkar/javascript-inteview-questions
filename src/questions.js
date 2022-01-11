@@ -118,9 +118,8 @@ const navigateToGivenPath = (obj, path) => {
   // Implement
 };
 
-console.log(navigateToGivenPath(exampleObj, "a.b.c"));
-// Output navigateToGivenPath(exampleMap, "a.b.c") => JavaScript is fun 😎
-// Output navigateToGivenPath(exampleMap, "a.b.c.d") => null
+// Output navigateToGivenPath(exampleObj, "a.b.c") => JavaScript is fun 😎
+// Output navigateToGivenPath(exampleObj, "a.b.c.d") => null
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
