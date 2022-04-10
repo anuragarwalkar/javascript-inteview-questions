@@ -43,7 +43,11 @@ console.log("Second Try:", memoHeavyJob(5, 5));
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-console.log("a");
-Promise.resolve(() => console.log("b")).then((res) => res());
-console.log("c");
+console.log("A");
+setTimeout(() => {
+  console.log("B");
+}, 0);
+Promise.resolve(() => console.log("C")).then((res) => res());
+console.log("D");
+// Follow this link for the details https://www.jsv9000.app/
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
