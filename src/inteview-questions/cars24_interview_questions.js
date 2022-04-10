@@ -49,5 +49,25 @@ setTimeout(() => {
 }, 0);
 Promise.resolve(() => console.log("C")).then((res) => res());
 console.log("D");
-// Follow this link for the details https://www.jsv9000.app/
+// Follow this link for the details https://bit.ly/3Jp6SAH
+// https://www.jsv9000.app
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Infinite currying
+function add() {}
+
+console.log(add(5)(2)(5)());
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Implement this code
+const result = calc.add(5).subtract(2).multiply(5);
+console.log("result:", result);
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Implement this code In React
+// https://htp7y0.csb.app/
+// https://codesandbox.io/s/nested-files-and-folder-htp7y0
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
