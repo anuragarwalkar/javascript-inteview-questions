@@ -28,10 +28,10 @@ obj.display.call(obj1);
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // Write your own memoization function
-function memo() {}
+function memo() { }
 
 function heavyJob(num1, num2) {
-  for (let i = 0; i <= 1000000000; i++) {}
+  for (let i = 0; i <= 1000000000; i++) { }
   return num1 * num2;
 }
 
@@ -55,7 +55,7 @@ console.log("D");
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // Infinite currying
-function add() {}
+function add() { }
 
 console.log(add(5)(2)(5)());
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -71,3 +71,30 @@ console.log("result:", result);
 // https://htp7y0.csb.app/
 // https://codesandbox.io/s/nested-files-and-folder-htp7y0
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Composition Polyfill
+function addFive(a) {
+  return a + 5;
+}
+
+function substractTwo(a) {
+  return a - 2;
+}
+
+function multiplyFour(a) {
+  return a * 4;
+}
+
+function compose(...functions) {
+  return (args) => {
+    return functions.reduceRight((arg, fn) => fn(arg), args);
+  }
+}
+
+const eval = compose(addFive, substractTwo, multiplyFour);
+
+console.log('eval:', eval(100), 100 * 4 - 2 + 5);
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
