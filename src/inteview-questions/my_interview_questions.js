@@ -83,3 +83,19 @@ change(a, b, c);
 
 console.log(a.name, b, c);
 // ----------------------------------------
+
+// Tell the console output
+var y = 1;
+if (function f() {}) {
+  y += typeof f;
+}
+console.log(y);
+// -----------------------------------------
+
+// Tell below output
+(function () {
+  var a = (b = 5);
+})();
+
+console.log(b);
+// -----------------------------------------
