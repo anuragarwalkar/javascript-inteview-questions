@@ -1,8 +1,8 @@
 // Objects in javascript
 // Question 3 - What's the output of the following code
-let a = {};
-let b = { key: "b" };
-let c = { key: "c" };
+const a = {};
+const b = { key: "b" };
+const c = { key: "c" };
 
 a[b] = 123;
 a[c] = 456;
