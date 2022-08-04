@@ -40,7 +40,7 @@ console.log(a[b]);
 
 // What's the output
 let person = { name: "Anurag" };
-const members = [person]; // 2424242
+const members = [person];
 person = null;
 
 console.log(members); //
@@ -58,3 +58,28 @@ multiply();
 multiply(value);
 multiply(value);
 // -----------------------------------------------------
+
+// Write solution
+function isInteger(val) {}
+// example
+isInteger(12); // true
+isInteger(16.4); //false
+// -----------------------------------------------------
+
+// Tell me console.log
+var a = {
+  name: "Globant",
+};
+var b = 2;
+var c = [];
+
+function change(tempA, tempB, tempC) {
+  tempA.name = "Pune";
+  tempB = 3;
+  tempC.push("c");
+}
+
+change(a, b, c);
+
+console.log(a.name, b, c);
+// ----------------------------------------
