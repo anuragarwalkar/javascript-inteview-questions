@@ -1,8 +1,8 @@
 // Objects in javascript
 // Question 3 - What's the output of the following code
-const a = 4;
-const b = { key: "b" };
-const c = { key: "c" };
+let a = {};
+let b = { key: "b" };
+let c = { key: "c" };
 
 a[b] = 123;
 a[c] = 456;
@@ -12,10 +12,10 @@ console.log(a[b]);
 
 // What's the output
 let person = { name: "Anurag" };
-const members = [person];
+const members = [person]; // 2424242
 person = null;
 
-console.log(members);
+console.log(members); //
 // -----------------------------------------------------
 
 // What's the output
@@ -25,8 +25,8 @@ const multiply = (x = { ...value }) => {
   console.log((x.number *= 2));
 };
 
-multiply();
-multiply();
-multiply(value);
-multiply(value);
+multiply(); // 20
+multiply(); // 20
+multiply(value); // 20
+multiply(value); // 40
 // -----------------------------------------------------
