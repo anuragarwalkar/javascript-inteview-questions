@@ -29,7 +29,7 @@ funcA();
 funcB();
 
 // Objects in javascript
-// Question 3 - What's the output of the following code
+// What's the output of the following code
 const a = {};
 const b = { key: "b" };
 const c = { key: "c" };
@@ -37,7 +37,7 @@ const c = { key: "c" };
 a[b] = 123;
 a[c] = 456;
 
-console.log(a[b]);
+console.log(a[b]); // 123
 // -----------------------------------------------------
 
 // What's the output
@@ -45,7 +45,7 @@ let person = { name: "Anurag" };
 const members = [person];
 person = null;
 
-console.log(members); //
+console.log(members);
 // -----------------------------------------------------
 
 // What's the output
