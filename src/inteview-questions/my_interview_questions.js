@@ -5,6 +5,8 @@ function foo() {
   var a = 20;
 }
 
+foo();
+
 // Tell sequence of the console logs
 const callMe = () => new Promise((resolve) => resolve("Hi from promise! 👋"));
 
