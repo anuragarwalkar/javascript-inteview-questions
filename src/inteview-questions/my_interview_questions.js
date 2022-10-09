@@ -62,7 +62,7 @@ multiply(value);
 // -----------------------------------------------------
 
 // Write solution
-function isInteger(val) {}
+function isInteger(val) { }
 // example
 isInteger(12); // true
 isInteger(16.4); //false
@@ -88,7 +88,7 @@ console.log(a.name, b, c);
 
 // Tell the console output
 var y = 1;
-if (function f() {}) {
+if (function f() { }) {
   y += typeof f;
 }
 console.log(y);
@@ -101,3 +101,27 @@ console.log(y);
 
 console.log(b);
 // -----------------------------------------
+
+
+
+// Create own JavaScript Promise.all function ---------------------
+const promise1 = new Promise((resolve, reject) => setTimeout(() => resolve('Promise 1'), 1000));
+const promise2 = new Promise((resolve, reject) => setTimeout(() => resolve('Promise 2'), 2000));
+const promise3 = new Promise((resolve, reject) => setTimeout(() => resolve('Promise 3'), 3000));
+const promise4 = new Promise((resolve, reject) => setTimeout(() => resolve('Promise 4'), 4000));
+
+
+async function promiseAll(...promises) {
+  const results = [];
+
+  for (let curr of promises) {
+    results.push(await curr);
+  }
+
+  return results;
+}
+
+promiseAll(promise1, promise2).then(res => {
+  console.log('result:', res);
+})
+// ---------------------------------------------------------------
