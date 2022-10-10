@@ -125,3 +125,18 @@ promiseAll(promise1, promise2).then(res => {
   console.log('result:', res);
 })
 // ---------------------------------------------------------------
+
+
+// Create deep euqal----------------------------------------------
+function deepEuqal(value1, value2) {
+  if (typeof value1 != 'object' && typeof value2 != 'object') {
+    // Add not a number check NaN
+
+    return value1 === value2
+  }
+
+  return false
+}
+
+deepEuqal(1, 1)
+// ---------------------------------------------------------------
