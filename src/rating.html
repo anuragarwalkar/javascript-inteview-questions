@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .star {
+            position: relative;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-left: 0.9em;
+            margin-right: 0.9em;
+            margin-bottom: 1.2em;
+            border-right: 0.3em solid transparent;
+            border-bottom: 0.7em solid grey;
+            border-left: 0.3em solid transparent;
+            /* Controlls the size of the stars. */
+            font-size: 24px;
+        }
+
+        .star:before,
+        .star:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 0.6em;
+            left: -1em;
+            border-right: 1em solid transparent;
+            border-bottom: 0.7em solid gray;
+            border-left: 1em solid transparent;
+            transform: rotate(-35deg);
+        }
+
+        .star:after {
+            transform: rotate(35deg);
+        }
+
+        .active {
+            border-bottom: 0.7em solid #FFA500;
+        }
+
+        .active:before,
+        .active:after {
+            border-bottom: 0.7em solid #FFA500;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="rating">
+        <i class="star" id="1"></i>
+        <i class="star" id="2"></i>
+        <i class="star" id="3"></i>
+        <i class="star" id="4"></i>
+        <i class="star" id="5"></i>
+    </div>
+</body>
+
+<script>
+    const rating = document.getElementById('rating')
+
+    rating.addEventListener('click', (e) => {
+        rating.childNodes.forEach((item) => {
+            if (item.id <= e.target.id) {
+                item.classList.add('active');
+            } else if (item.id) {
+                item.classList.remove('active');
+            }
+        })
+    })
+</script>
+
+</html>
