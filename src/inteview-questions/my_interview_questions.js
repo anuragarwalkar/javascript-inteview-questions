@@ -153,3 +153,22 @@ const result = deepEqual('anurag', 'anurag');
 
 console.log('result:', result);
 // ---------------------------------------------------------------
+
+
+// What is proxy pattern 
+// How we can log that object is setting/getting some value
+const privateObject = {
+
+};
+
+const proxy = new Proxy(privateObject, {
+  set(target, property, value) {
+    target[property] = value;
+    console.log('setting:', property, value);
+    return true;
+  },
+  get(target, property) {
+    console.log('gettong:', property);
+    return target[property]
+  }
+});
