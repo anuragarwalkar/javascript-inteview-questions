@@ -1,3 +1,19 @@
+// Tell the console log
+const b = {
+  name:"Anurag",
+  f: function(){
+    var self = this;
+    console.log(this.name);
+    (function(){
+      console.log(this.name);
+      console.log(self.name);
+    })();
+  }
+}
+b.f();
+
+
+// Console.log output
 const a = function(){
   console.log('a', this);
 
