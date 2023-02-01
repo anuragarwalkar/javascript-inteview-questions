@@ -1,3 +1,25 @@
+const a = function(){
+  console.log('a', this);
+
+  const b = {
+    func1: function(){
+      console.log('b', this);
+    }  
+  }
+
+  const c = {
+    func2: ()=>{
+      console.log('c', this);
+    }
+  }
+
+  b.func1();
+  c.func2();
+}
+
+a();
+
+
 // tell the console log
 let hero = {
     powerLevel: 99,
