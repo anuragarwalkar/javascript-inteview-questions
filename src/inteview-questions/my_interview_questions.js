@@ -235,3 +235,29 @@ const proxy = new Proxy(privateObject, {
     return target[property]
   }
 });
+
+const allValues = [1, [1, [[9], [2], [3]]]];
+
+const removeNestedDuplicates = (values) => {
+    if(!Array.isArray(values)) {
+        return values;
+    }
+
+    const resultArray = []
+
+    for (const item of values) {
+        const value = removeNestedDuplicates(item);
+
+        if(Array.isArray(value)) {
+            for (const inner of value) {
+                if(!resultArray.includes(inner)) {
+                    resultArray.push(inner);
+                }
+            }
+        }else if(item && !resultArray.includes(value)) {
+            resultArray.push(value);
+        }
+    }
+
+    return resultArray;
+}
