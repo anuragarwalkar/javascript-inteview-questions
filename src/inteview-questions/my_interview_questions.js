@@ -5,7 +5,17 @@ let f = (o) => o = {'a': 3};
 f(obj);
 console.log(obj.a);
 
+const object = {
+  name: "John",
+  hi() {
+    console.log(this);
+    console.log(`Hello, ${this.name}!`);
+  }
+};
 
+ 
+
+setTimeout(object.hi, 1000);
 
 // Tell the console log
 const b = {
