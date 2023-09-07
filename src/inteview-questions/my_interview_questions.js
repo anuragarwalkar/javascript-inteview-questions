@@ -1,3 +1,12 @@
+var obj = {'a': 5};
+
+let f = (o) => o = {'a': 3};
+
+f(obj);
+console.log(obj.a);
+
+
+
 // Tell the console log
 const b = {
   name:"Anurag",
