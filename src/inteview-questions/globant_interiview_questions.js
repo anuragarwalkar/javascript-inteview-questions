@@ -22,10 +22,17 @@ function foo() {
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 // What is the value of clothes[0]:
-const clothes = ["jacket", "t-shirt"];
-const copiedClothes = clothes;
-copiedClothes.length = 0;
+const clothes = [{name: "jacket", price: {max: 1200, min: 1100}}, {name"t-shirt",  price: {max: 700, min: 550}}];
+const clonedClothes = clothes;
+
+clonedClothes.length = 0;
 console.log(clothes[0]); // => ???
+
+clonedClothes[0].name = "hoodie";
+clonedClothes[0].price.min = 0;
+
+console.log(clothes[0].name);
+console.log(clothes[0].price.min);
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
