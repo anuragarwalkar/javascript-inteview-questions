@@ -43,24 +43,6 @@ console.log(sum(1)(2)(3)());
 // Output 6
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// Implement below
-const exampleObj = {
-    a: {
-        b: {
-            c: "JavaScript is fun 😎",
-        },
-    },
-};
-
-const navigateToGivenPath = (obj, path) => {
-    // Implement
-};
-
-// Output navigateToGivenPath(exampleObj, "a.b.c") => JavaScript is fun 😎
-// Output navigateToGivenPath(exampleObj, "a.b.c.d") => null
-// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-
 // Create own JavaScript Promise.all function ---------------------
 const promise1 = new Promise((resolve, reject) => setTimeout(() => resolve('Promise 1'), 1000));
 const promise2 = new Promise((resolve, reject) => setTimeout(() => resolve('Promise 2'), 2000));
@@ -82,6 +64,24 @@ promiseAll(promise1, promise2).then(res => {
 
 })
 // ---------------------------------------------------------------
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Implement below
+const exampleObj = {
+    a: {
+        b: {
+            c: "JavaScript is fun 😎",
+        },
+    },
+};
+
+const navigateToGivenPath = (obj, path) => {
+    // Implement
+};
+
+// Output navigateToGivenPath(exampleObj, "a.b.c") => JavaScript is fun 😎
+// Output navigateToGivenPath(exampleObj, "a.b.c.d") => null
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 // ---------------------------------------------------------------
 function getValueByPath(value, path) {
