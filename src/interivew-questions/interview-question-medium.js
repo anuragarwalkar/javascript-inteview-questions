@@ -82,3 +82,23 @@ promiseAll(promise1, promise2).then(res => {
 
 })
 // ---------------------------------------------------------------
+
+// ---------------------------------------------------------------
+function getValueByPath(value, path) {
+   path = path.replaceAll(/\[/g, '.').replaceAll(/\]/g, '');    
+   path = path.split('.').filter(Boolean);
+    
+   for(let i = 0; i < path.length; i++) {
+    value = value[path[i]];
+   }
+
+   return value;
+}
+
+console.log(getValueByPath({ developer: "Software Engineer" }, "developer")); // Software Engineer
+console.log(getValueByPath({ developer: { firstName: "Tom", lastName: "Cruz" } }, "developer.lastName")); // Cruz
+console.log(getValueByPath({ developer: { tickets: [{id: 1, name: 'fix main page css'}] } }, "developer.tickets[0].name")); // fix main page css
+console.log(getValueByPath([{ developer: "Tom" }, { count: [0, 1] }], "[1].count[0]")); // 0
+console.log(getValueByPath([{ developer: "Tom" }, [0, null]], "[1][1]")); // null
+console.log(getValueByPath([{ developer: "Tom" }, [0, null]], "[1][3]")); // undefined
+// ---------------------------------------------------------------
