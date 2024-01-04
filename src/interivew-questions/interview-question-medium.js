@@ -51,18 +51,21 @@ const promise4 = new Promise((resolve, reject) => setTimeout(() => resolve('Prom
 
 
 async function promiseAll(...promises) {
-    const results = [];
-
-    for (let curr of promises) {
-        results.push(await curr);
-    }
-
-    return results;
+  
 }
 
 promiseAll(promise1, promise2).then(res => {
+    console.log(result)
+});
 
-})
+// Solution ----------------------------------------------------------
+// const results = [];
+
+//   for (let curr of promises) {
+//       results.push(await curr);
+//   }
+
+//   return results;
 // ---------------------------------------------------------------
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -83,16 +86,9 @@ const navigateToGivenPath = (obj, path) => {
 // Output navigateToGivenPath(exampleObj, "a.b.c.d") => null
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-// ---------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 function getValueByPath(value, path) {
-   path = path.replaceAll(/\[/g, '.').replaceAll(/\]/g, '');    
-   path = path.split('.').filter(Boolean);
-    
-   for(let i = 0; i < path.length; i++) {
-    value = value[path[i]];
-   }
-
-   return value;
+ // Implement
 }
 
 console.log(getValueByPath({ developer: "Software Engineer" }, "developer")); // Software Engineer
@@ -101,4 +97,14 @@ console.log(getValueByPath({ developer: { tickets: [{id: 1, name: 'fix main page
 console.log(getValueByPath([{ developer: "Tom" }, { count: [0, 1] }], "[1].count[0]")); // 0
 console.log(getValueByPath([{ developer: "Tom" }, [0, null]], "[1][1]")); // null
 console.log(getValueByPath([{ developer: "Tom" }, [0, null]], "[1][3]")); // undefined
-// ---------------------------------------------------------------
+
+// Solution -----------------------------------------------------
+// path = path.replaceAll(/\[/g, '.').replaceAll(/\]/g, '');    
+//  path = path.split('.').filter(Boolean);
+
+//  for(let i = 0; i < path.length; i++) {
+//   value = value[path[i]];
+//  }
+
+//  return value;
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
