@@ -128,13 +128,6 @@ console.log(y);
 console.log(b);
 // -----------------------------------------
 
-const result = deepEqual('anurag', 'anurag');
-// const result = deepEqual({ parent: { child: { name: 'anurag' } } }, { parent: { child: { name: 'anurag' } } });
-
-console.log('result:', result);
-// ---------------------------------------------------------------
-
-
 // What is proxy pattern 
 // How we can log that object is setting/getting some value
 const privateObject = {
