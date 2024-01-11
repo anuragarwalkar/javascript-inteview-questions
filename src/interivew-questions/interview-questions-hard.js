@@ -110,3 +110,41 @@ console.log(JSON.stringify(obj, null, 2));
 // }
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+function highlight(str, keywords) {
+  let result = "";
+
+  const keywordsCache = new Set(keywords);
+
+  for(let word of str.split(' ')) {
+    if(keywordsCache.has(word)) {
+        result += `<strong>${word}</strong>`;
+    }else {
+      let pattern = null;
+
+        for(let i = 0; i < word.length; i++) {
+         for(let j = i+1; j <= word.length; j++) {
+          if(keywordsCache.has(word.slice(i, j))) {
+            pattern = [i, j];
+          }
+         }
+        }
+
+        if(pattern) {
+          const [start, end] = pattern;
+          result += `${word.slice(0, start)}<strong>${word.slice(start, end)}</strong>${word.slice(end)}`;
+        }else {
+          result += ` ${word} `;
+        }
+    }
+  }
+
+  return result;
+}
+
+const str = "Ultimate JavaScript / FrontEnd Guide";
+const words = ['FrontEnd', 'JavaScript'];
+
+console.log(highlight(str, words));
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
