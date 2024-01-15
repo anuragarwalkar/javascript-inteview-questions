@@ -9,6 +9,18 @@ console.log("A" - "B" - 2);
 console.log(1 + 1 + "a" + 1 + 1);
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+var name = 'anurag';
+
+const person = {
+	fullName: 'nikhil ghaytadak',
+  callMe(): function () {
+    console.log(this.name);
+    console.log(this.fullName);
+	}
+}
+
+person.callMe();
+
 // Tell me console.log
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 var a = {
