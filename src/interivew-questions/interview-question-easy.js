@@ -12,7 +12,7 @@ console.log(1 + 1 + "a" + 1 + 1);
 var name = 'anurag';
 
 const person = {
-	fullName: 'nikhil ghaytadak',
+	fullName: 'anurag arwalkar',
   callMe(): function () {
     console.log(this.name);
     console.log(this.fullName);
