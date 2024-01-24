@@ -9,17 +9,57 @@ console.log("A" - "B" - 2);
 console.log(1 + 1 + "a" + 1 + 1);
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-var name = 'anurag';
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+var a = 10;
+{
+    var a = -10;
+}
+let b = a;
+{
+    let b = -20;
+}
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-const person = {
-	fullName: 'anurag arwalkar',
-  callMe: function () {
-    console.log(this.name);
-    console.log(this.fullName);
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+var userName = "John";
+
+function b() {
+  
+  setTimeout(() => {
+    console.log("timeout : ", userName);
+  }, 0);
+
+  new Promise((resolve, reject) => 
+      resolve("resolve")
+  ).then(resolve => console.log(resolve, userName));
+
+	console.log(userName);  
+	console.log("b");
+  
+  var userName = "Divya";
+}
+
+b();
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+var name = "Nikhil";
+
+var person = {
+	name: "Divya",
+	age: 30,
+	getDetail: function () {
+		console.log(this.name);
+	},
+	getName: () => {
+		console.log(this.name);
 	}
 }
 
-person.callMe();
+person.getDetail(); 
+person.getName(); 
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 
 // Tell me console.log
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
