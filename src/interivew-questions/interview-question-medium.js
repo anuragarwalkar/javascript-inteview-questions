@@ -1,3 +1,18 @@
+// print all
+{"isbn": "123-456-222",  
+ "author": 
+    {
+      "lastname": "Doe",
+      "firstname": "Jane"
+    },
+"editor": 
+    {
+      "lastname": "Smith",
+      "firstname": "Jane"
+    }
+ }
+
+
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // Group items on the basis of age of given array of object
 let people = [
