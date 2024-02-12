@@ -15,6 +15,17 @@ function foo() {
 
 foo()
 
+//
+const personInstance = {
+  name: 'anurag',
+  isAlive: true,
+  getCurrentAge: () => {
+  	return 28,
+  }
+}
+
+const parsed = JSON.parse(JSON.stringify(personInstance));
+
 
 // Clousure and scope
 let i;
