@@ -1,12 +1,8 @@
+// *************************************** Output Based Question *************************************************
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//Type your code here
-console.log(1 + "2" + "2");
-console.log(1 + +"2" + "2");
-console.log(1 + -"1" + "2");
-console.log(+"1" + "1" + "2");
-console.log("A" - "B" + "2");
-console.log("A" - "B" - 2);
 console.log(1 + 1 + "a" + 1 + 1);
+console.log(+"1" + "1" + "2");
+console.log("A" - "B" - 2);
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -18,6 +14,7 @@ let b = a;
 {
     let b = -20;
 }
+
 console.log(b)
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -25,18 +22,17 @@ console.log(b)
 var userName = "John";
 
 function b() {
-  
   setTimeout(() => {
     console.log("timeout : ", userName);
   }, 0);
 
-  new Promise((resolve, reject) => 
-      resolve("resolve")
-  ).then(resolve => console.log(resolve, userName));
+  new Promise((resolve, reject) => resolve("resolve")).then((resolve) =>
+    console.log(resolve, userName)
+  );
 
-	console.log(userName);  
-	console.log("b");
-  
+  console.log(userName);
+  console.log("b");
+
   var userName = "Divya";
 }
 
@@ -44,25 +40,23 @@ b();
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-var name = "Nikhil";
+var name = "Steve";
 
 var person = {
-	name: "Divya",
-	age: 30,
-	getDetail: function () {
-		console.log(this.name);
-	},
-	getName: () => {
-		console.log(this.name);
-	}
-}
+  name: "Laurene",
+  age: 30,
+  getDetail: function () {
+    console.log(this.name);
+  },
+  getName: () => {
+    console.log(this.name);
+  },
+};
 
-person.getDetail(); 
-person.getName(); 
+person.getDetail();
+person.getName();
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-
-// Tell me console.log
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 var a = {
   name: "Globant",
@@ -180,3 +174,4 @@ const funcB = async () => {
 funcA();
 funcB();
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+// *************************************** Output Based Question END *************************************************
