@@ -39,7 +39,7 @@ function set(exampleObject, path, value) {
     return targetObject;
 }
 
-console.log(set(abc, 'a.b.c.d[0].e', 'learnersbucket'));
+console.log(set(abc, 'a.b.c.100', 'learnersbucket'));
 console.log('abc:', JSON.stringify(abc))
 
 // _.set(abc, "a.b.c", 'lodashWOrks')
