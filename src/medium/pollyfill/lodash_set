@@ -1,0 +1,45 @@
+
+import _ from 'lodash';
+
+const abc = {
+    a: {
+      b: {
+       
+      },
+      d: {
+        a: "hello"
+      }
+    }
+  };
+
+function set(exampleObject, path, value) {
+    if(typeof path === 'string') {
+        path = path.replace(/\[/g, '.').replace(/\]/g, '').split('.');
+    }
+    
+
+    let targetObject = exampleObject;
+
+    for(let i = 0; i < path.length; i++) {
+        let temp = path[i];
+
+        if(i === path.length - 1) {
+            const isNumber = !isNaN(parseInt(path[i]))
+            targetObject[isNumber ? parseInt(temp) : temp] = value;
+        }
+
+        if(!targetObject[temp]) {
+          targetObject[temp] = isNaN(parseInt(path[i+1])) ? {} : []
+        }
+
+        targetObject = targetObject[temp];
+
+    }
+
+    return targetObject;
+}
+
+console.log(set(abc, 'a.b.c.d[0].e', 'learnersbucket'));
+console.log('abc:', JSON.stringify(abc))
+
+// _.set(abc, "a.b.c", 'lodashWOrks')
