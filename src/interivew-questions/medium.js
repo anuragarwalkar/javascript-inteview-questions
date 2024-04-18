@@ -10,6 +10,31 @@ highlight("Ultimate JavaScript / FrontEnd Guide", [
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+const json = {
+  type: "div",
+  props: { id: "hello", class: "foo" },
+  children: [
+    { type: "h1", children: "HELLO" },
+    {
+      type: "p",
+      children: [{ type: "span", props: { class: "bar" }, children: "World" }],
+    },
+  ],
+};
+
+function JSONtoHTML(htmlMeta) {
+  // Implement
+}
+
+// Output: <div id="hello" class="foo">
+//   <h1>HELLO</h1>
+//   <p>
+//     <span class="bar">World</span>
+//   </p>
+// </div>;
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // Print all values from this object ("123-456-222", "Doe", "Jane")
 const exampleData = {
   isbn: "123-456-222",
