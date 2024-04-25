@@ -87,6 +87,12 @@ const navigateToGivenPath = (obj, path) => {
 
 // Output navigateToGivenPath(exampleObj, "a.b.c") => JavaScript is fun 😎
 // Output navigateToGivenPath(exampleObj, "a.b.c.d") => null
+
+// set value by path
+const setValueByPath = (obj, path, value) => {
+  // Implement
+};
+// Output setValueByPath(exampleObj, "a.b.data[0]", 'Anurag') => null
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
