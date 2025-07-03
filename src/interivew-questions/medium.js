@@ -9,6 +9,22 @@ highlight("Ultimate JavaScript / FrontEnd Guide", [
 // "Ultimate <strong>JavaScript</strong> / <strong>FrontEnd</strong> Guide"
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+// Lexical scope vs dynamic scope
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+var a = 1;
+
+function foo() {
+  console.log(a);
+}
+
+function bar() {
+  var a = 2;
+  foo();
+}
+
+bar();
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 const json = {
   type: "div",
